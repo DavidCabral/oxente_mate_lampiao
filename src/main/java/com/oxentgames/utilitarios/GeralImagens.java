@@ -96,7 +96,7 @@ public final class GeralImagens
     public static final String IMG_DELEGADO = LOCAL_IMG 
             + "lampiao3.jpg";
    
-    //constante que indica a imagem de Lampião da hist�ria
+    //constante que indica a imagem de Lampião da história
     public static final String IMG_LAMP = LOCAL_IMG
             + "lampiao1.jpg";
    

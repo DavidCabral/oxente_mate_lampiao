@@ -125,13 +125,13 @@ public class Casa extends JLabel implements CasaItf
 		return (peca.getCor()==cor)?true:false;
 	}
 
-	//Pergunta se a casa está sendo atacada por uma pe�a preta.
+	//Pergunta se a casa está sendo atacada por uma peça preta.
 	public boolean ehAtaquePreto()
 	{
 		return ataquePreto;
 	}
 	
-	//Pergunta se a casa está sendo atacada por uma pe�a branca.
+	//Pergunta se a casa está sendo atacada por uma peça branca.
 	public boolean ehAtaqueBranco()
 	{
 		return ataqueBranco;
@@ -144,13 +144,13 @@ public class Casa extends JLabel implements CasaItf
 		ataqueBranco = false;
 	}
 
-	//Informa a casa que ela está sendo atacada por uma pe�a preta.
+	//Informa a casa que ela está sendo atacada por uma peça preta.
 	public void setAtaquePreto(boolean ataque)
 	{
 		ataquePreto = ataque;
 	}
 
-	//Informa a casa que ela está sendo atacada por uma pe�a branca
+	//Informa a casa que ela está sendo atacada por uma peça branca
 	public void setAtaqueBranco(boolean ataque)
 	{
 		ataqueBranco = ataque;
@@ -166,7 +166,7 @@ public class Casa extends JLabel implements CasaItf
 		this.passante = passante;
 	}
 
-	//Verifica se casa � igual.
+	//Verifica se casa é igual.
 	public boolean verificaCasaIgual(CasaItf casa)
 	{
 		return (this.x==casa.getPosicaoX() 

@@ -62,8 +62,8 @@ public class RainhaPreta extends PecaAbstrata
 		} 
 		else
 		{
-			JOptionPane.showMessageDialog(popupMenu, "Capit�: Oxente bixin, está inválida!","ERRO",JOptionPane.ERROR_MESSAGE);
-			throw new MovimentoEPosicaoInvalida("Capit�: Oxente bixin, está inválida!");
+			JOptionPane.showMessageDialog(popupMenu, "Capitú: Oxente bixin, está inválida!","ERRO",JOptionPane.ERROR_MESSAGE);
+			throw new MovimentoEPosicaoInvalida("Capitú: Oxente bixin, está inválida!");
 		}	
 	}
 

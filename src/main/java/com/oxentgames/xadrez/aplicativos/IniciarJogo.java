@@ -39,7 +39,7 @@ public class IniciarJogo extends JFrame implements ActionListener {
 		super.setSize(new Dimension(800, 750));
 		super.setLocationRelativeTo(null); 
 		      
-       //Adiciona o Bot�o para Lampião Desistir da partida
+       //Adiciona o Botão para Lampião Desistir da partida
        lampDesistir = new JButton("Desistir");//cria um JButton
        lampDesistir.setBackground(Color.ORANGE);//JButton com a cor de fundo laranja
        lampDesistir.setPreferredSize(new Dimension(100, 20));//JButton com 100 pixels de largura
@@ -59,7 +59,7 @@ public class IniciarJogo extends JFrame implements ActionListener {
 			}
 		});
            
-       //Adicinoa o Bot�o para Lampião Empatar
+       //Adicinoa o Botão para Lampião Empatar
        lampEmpatar = new JButton("Empatar");//cria um JButton
        lampEmpatar.setBackground(Color.ORANGE);//JButton com a cor de fundo laranja
        lampEmpatar.setPreferredSize(new Dimension(100, 20));//JButton com 100 pixels de largura
@@ -70,7 +70,7 @@ public class IniciarJogo extends JFrame implements ActionListener {
 			{
 				int ret = JOptionPane.showConfirmDialog(popupMenu,"Voce deseja Pedir Empate ao Delegado?","Enviando mensagem ao Delegado",JOptionPane.YES_NO_OPTION);
 				if(ret == JOptionPane.YES_OPTION){
-					int ret2 = JOptionPane.showConfirmDialog(popupMenu,"Lampião esta pedindo Empate..Voc� aceita? ","Mensagem de Lampião",JOptionPane.YES_NO_OPTION);
+					int ret2 = JOptionPane.showConfirmDialog(popupMenu,"Lampião esta pedindo Empate..Você aceita? ","Mensagem de Lampião",JOptionPane.YES_NO_OPTION);
 					if(ret2 == JOptionPane.YES_OPTION){
 					String mensagem = "JOGO EMPATADO";
 					JOptionPane.showMessageDialog(null,mensagem,"EMPATE ",JOptionPane.INFORMATION_MESSAGE,
@@ -82,7 +82,7 @@ public class IniciarJogo extends JFrame implements ActionListener {
 			}
 		});
          
-       //Adiciona o Bot�o para o Delegado Desistir da partida
+       //Adiciona o Botão para o Delegado Desistir da partida
        deleDesistir = new JButton("Desistir");//cria um JButton
        deleDesistir.setBackground(Color.ORANGE);//JButton com a cor de fundo laranja
        deleDesistir.setBounds(660,190,115,25);
@@ -94,14 +94,14 @@ public class IniciarJogo extends JFrame implements ActionListener {
 				int ret = JOptionPane.showConfirmDialog(popupMenu,"Voce deseja realmente Desistir da partida?","Vai Correr Delegado?",JOptionPane.YES_NO_OPTION);
 				if(ret == JOptionPane.YES_OPTION){
 					String mensagem = "Cangaceiros Vencem o jogo";
-					JOptionPane.showMessageDialog(null,mensagem,"Comigo � na Inhanha ",JOptionPane.INFORMATION_MESSAGE,
+					JOptionPane.showMessageDialog(null,mensagem,"Comigo é na Inhanha ",JOptionPane.INFORMATION_MESSAGE,
 					CarregaImagemUtil.createImageIcon(GeralImagens.IMG_CANG));
 					tabuleiro.setFimDeJogo(true);
 			    }
 			}
 		});
               
-       //Adiciona o Bot�o para Delegado Empatar
+       //Adiciona o Botão para Delegado Empatar
        deleEmpatar = new JButton("Empatar");//cria um JButton
        deleEmpatar.setBackground(Color.ORANGE);//JButton com a cor de fundo laranja
        deleEmpatar.setBounds(660, 215,115, 25);
@@ -111,7 +111,7 @@ public class IniciarJogo extends JFrame implements ActionListener {
 			{
 				int ret = JOptionPane.showConfirmDialog(popupMenu,"Voce deseja Pedir Empate a Lampião?","Enviando mensagem a Lampião",JOptionPane.YES_NO_OPTION);
 				if(ret == JOptionPane.YES_OPTION){
-					int ret2 = JOptionPane.showConfirmDialog(popupMenu,"O Delegado esta pedindo Empate..Voc� aceita? ","Mensagem do Delegado",JOptionPane.YES_NO_OPTION);
+					int ret2 = JOptionPane.showConfirmDialog(popupMenu,"O Delegado esta pedindo Empate..Você aceita? ","Mensagem do Delegado",JOptionPane.YES_NO_OPTION);
 					if(ret2 == JOptionPane.YES_OPTION){
 					String mensagem = "JOGO EMPATADO";
 					JOptionPane.showMessageDialog(null,mensagem,"EMPATE ",JOptionPane.INFORMATION_MESSAGE,
@@ -207,7 +207,7 @@ public class IniciarJogo extends JFrame implements ActionListener {
 					
 					Casa casaTemporaria = (Casa)event.getComponent().getComponentAt(x,y);
 					
-					// se clicou numa pe�a pela primeira vez 
+					// se clicou numa peçaa pela primeira vez
 					if (!tabuleiro.fimDoJogo())
 					{
 						if ((casaTemporaria.getPeca()!=null) && (casasTabuleiro.isEmpty())	&& (vezDoJogador==casaTemporaria.getPeca().getCor()))
@@ -245,7 +245,7 @@ public class IniciarJogo extends JFrame implements ActionListener {
 					}
 					catch (Exception e)
 					{
-						JOptionPane.showMessageDialog(popupMenu, "Voc� clicou fora do tabuleiro!","ERRO",JOptionPane.ERROR_MESSAGE);
+						JOptionPane.showMessageDialog(popupMenu, "Você clicou fora do tabuleiro!","ERRO",JOptionPane.ERROR_MESSAGE);
 					}
 				}	
 			}

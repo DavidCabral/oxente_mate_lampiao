@@ -32,7 +32,7 @@ public class PeaoPreto extends PecaAbstrata
 		Vector casasVisiveisTemporarias = this.getCasasQueEstaoVisiveis(bordas);		
 		// Verifica se a casa destino está contida numas das possíveis casas de movimento.
 		if (casasEmAtaqueTemporario.contains(casaDeDestino)||casasVisiveisTemporarias.contains(casaDeDestino)){
-			// verifica se o peão pulou uma casa na sua sa�da. Set a casa pulada como passante.
+			// verifica se o peão pulou uma casa na sua saída. Set a casa pulada como passante.
 			if ((casaDeDestino.getPosicaoY()-casaDeOrigem.getPosicaoY())==2)
 			{
 				((Casa)bordas.getCasa(x,y+1)).setMovimentoPassante(true);
@@ -41,7 +41,7 @@ public class PeaoPreto extends PecaAbstrata
 			// verifica se pode fazer passante.
 			if ((casaDeOrigem.getPosicaoY()==4) && (casaDeDestino.getMovimentoPassante()))
 			{
-				// pega a casa em que está o peão que sofrer� passante.
+				// pega a casa em que está o peão que sofrerá passante.
 				CasaItf casaTemporaria = bordas.getCasa(casaDeDestino.getPosicaoX(),casaDeDestino.getPosicaoY()-1);
 				// pega o peão que sofre passante.
 				Peca pecaTemporaria = casaTemporaria.getPeca();
@@ -54,7 +54,7 @@ public class PeaoPreto extends PecaAbstrata
 				tabuleiroTemporario.removeTodosAtaques();
 				tabuleiroTemporario.atualizaAtaqueBranco();
 				tabuleiroTemporario.atualizaAtaquePreto();
-				// verifica se o movimento que fiz causou xeque mate no advers�rio.
+				// verifica se o movimento que fiz causou xeque mate no adversário.
 				if (tabuleiroTemporario.ehChequeMateBranco())
 				{
 					((Tabuleiro)bordas).mensagemNoFimDoJogo("Xeque - mate! Policiais Vencem!");
@@ -91,7 +91,7 @@ public class PeaoPreto extends PecaAbstrata
 				tabuleiroTemporario.atualizaAtaqueBranco();
 				tabuleiroTemporario.atualizaAtaquePreto();
 				
-				// verifica se as pe�as brancas venceram o jogo
+				// verifica se as peças brancas venceram o jogo
 				if (tabuleiroTemporario.ehChequeMateBranco())
 				{
 					((Tabuleiro)bordas).mensagemNoFimDoJogo("Xeque - mate! Policiais Vencem!");
@@ -110,7 +110,7 @@ public class PeaoPreto extends PecaAbstrata
 					JOptionPane.showMessageDialog(popupMenu, "O Delegado está em xeque, está inválida!","ERRO",JOptionPane.ERROR_MESSAGE);
 					throw new MovimentoEPosicaoInvalida("O Delegado está em xeque, está inválida");
 				}
-			// MOVE PE�A
+			// MOVE PEÇA
 			}
 			else
 			{
@@ -151,15 +151,15 @@ public class PeaoPreto extends PecaAbstrata
 		}			 
 	}
 	
-	//Pega a pe�a promovida.
+	//Pega a peça promovida.
 	private Peca getPromocaoPeao()
 	{
-		Object[] possiveis = {"Vigia", "Cavalo", "Padre","Capit�"};
+		Object[] possiveis = {"Vigia", "Cavalo", "Padre","Capitú"};
 		String s;
 		do{
 			s = (String)JOptionPane.showInputDialog(
 							this,
-							"Escolha a pe�a:",
+							"Escolha a peça:",
 							"",
 							JOptionPane.PLAIN_MESSAGE,
 							null,
@@ -196,7 +196,7 @@ public class PeaoPreto extends PecaAbstrata
 		}			
 	}
 
-	//Indica que a casa n�o pode mais receber passante.
+	//Indica que a casa não pode mais receber passante.
 	private void movePassante(Borda board)
 	{
 		for (int x = 0; x < 8 ; x++)
@@ -235,7 +235,7 @@ public class PeaoPreto extends PecaAbstrata
 			{
 				casasQueEstaoEmAtaque.add(casaTemporaria);
 			}
-			// verifica se � passante.
+			// verifica se é passante.
 			else if (((Casa)casaTemporaria).getMovimentoPassante()	&& (casaTemporaria.getPeca()==null))
 			{
 				casasQueEstaoEmAtaque.add(casaTemporaria);
@@ -250,7 +250,7 @@ public class PeaoPreto extends PecaAbstrata
 			{
 				casasQueEstaoEmAtaque.add(casaTemporaria);
 			}
-			// verifica se � passante
+			// verifica se é passante
 			else if (((Casa)casaTemporaria).getMovimentoPassante() && (casaTemporaria.getPeca()==null))
 			{
 				casasQueEstaoEmAtaque.add(casaTemporaria);

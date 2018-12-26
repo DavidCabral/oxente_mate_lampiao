@@ -23,22 +23,22 @@ public interface CasaItf
 	//Pega a cor da casa
 	public Color getCor();
 
-	//Modifica a pe�a que vai ocupar a casa
+	//Modifica a peça que vai ocupar a casa
 	public void setPeca(Peca novaPeca);
     
-	//Remove a pe�a da casa
+	//Remove a peça da casa
 	public void removePeca();
 	
-    //Pega a pe�a que está ocupando a casa
+    //Pega a peça que está ocupando a casa
 	public Peca getPeca();
 
-	//Verifica se a casa tem pe�a 
+	//Verifica se a casa tem peça 
 	public boolean temPeca();
 
-	//Verifica se a casa tem uma pe�a da seguinte cor.
+	//Verifica se a casa tem uma peça da seguinte cor.
 	public boolean temPeca(Color cor);
 	
-	//Verifica se a casa � igual. 
+	//Verifica se a casa é igual.
 	public boolean verificaCasaIgual(CasaItf casa);
 
 	//Verifica se essa casa faz parte do passante.

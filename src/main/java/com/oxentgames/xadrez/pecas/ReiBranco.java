@@ -36,7 +36,7 @@ public class ReiBranco extends PecaAbstrata
 		Vector casasPossiveis = new Vector();
 		Vector casasTemporarias = new Vector();
 
-		// Insere no vetor para logo abaixo, no while, verificar se a casa está dispon�vel para mover.
+		// Insere no vetor para logo abaixo, no while, verificar se a casa está disponível para mover.
 		casasTemporarias.add(bordas.getCasa(x+1,y+1));
 		casasTemporarias.add(bordas.getCasa(x+1,y-1));
 		casasTemporarias.add(bordas.getCasa(x+1,y));
@@ -46,7 +46,7 @@ public class ReiBranco extends PecaAbstrata
 		casasTemporarias.add(bordas.getCasa(x,y+1));
 		casasTemporarias.add(bordas.getCasa(x,y-1));
 		
-		// possíveis posi��es.
+		// possíveis posições.
 		CasaItf casaTemporaria=null;
 		Iterator it = casasTemporarias.iterator();
 		while(it.hasNext())
@@ -157,7 +157,7 @@ public class ReiBranco extends PecaAbstrata
 	{
 		Vector casasTemporarias = new Vector();
 
-		// Insere no vetor para logo abaixo, no while, verificar se a casa está dispon�vel para mover.
+		// Insere no vetor para logo abaixo, no while, verificar se a casa está disponível para mover.
 		casasTemporarias.add(bordas.getCasa(x+1,y+1));
 		casasTemporarias.add(bordas.getCasa(x+1,y-1));
 		casasTemporarias.add(bordas.getCasa(x+1,y));
@@ -166,7 +166,7 @@ public class ReiBranco extends PecaAbstrata
 		casasTemporarias.add(bordas.getCasa(x-1,y));
 		casasTemporarias.add(bordas.getCasa(x,y+1));
 		casasTemporarias.add(bordas.getCasa(x,y-1));
-		// possíveis posi��es.
+		// possíveis posições.
 		CasaItf casaTemporaria=null;
 		Iterator it = casasTemporarias.iterator();
 		while(it.hasNext())
@@ -183,7 +183,7 @@ public class ReiBranco extends PecaAbstrata
 		}		
 	}
 	
-	//Verifica se o rei j� se movimento.
+	//Verifica se o rei já se movimento.
 	public boolean reiMovimentou()
 	{
 		return movimentou;
@@ -194,7 +194,7 @@ public class ReiBranco extends PecaAbstrata
 		casasQueEstaoVisiveis = new Vector();
 		Vector casasTemporarias = new Vector();
 
-		// Insere no vetor para logo abaixo, no while, verificar se a casa está dispon�vel para mover.
+		// Insere no vetor para logo abaixo, no while, verificar se a casa está disponível para mover.
 		casasTemporarias.add(bordas.getCasa(x+1,y+1));
 		casasTemporarias.add(bordas.getCasa(x+1,y-1));
 		casasTemporarias.add(bordas.getCasa(x+1,y));
@@ -204,7 +204,7 @@ public class ReiBranco extends PecaAbstrata
 		casasTemporarias.add(bordas.getCasa(x,y+1));
 		casasTemporarias.add(bordas.getCasa(x,y-1));
 		
-		// possíveis posi��es.
+		// possíveis posições.
 		CasaItf casaTemporaria=null;
 		Iterator it = casasTemporarias.iterator();
 		while(it.hasNext())
@@ -222,7 +222,7 @@ public class ReiBranco extends PecaAbstrata
 		super.casasQueEstaoEmAtaque = new Vector();
 		Vector casasTemporaria = new Vector();
 
-		// Insere no vetor para logo abaixo, no while, verificar se a casa está dispon�vel para mover.
+		// Insere no vetor para logo abaixo, no while, verificar se a casa está disponível para mover.
 		casasTemporaria.add(bordas.getCasa(x+1,y+1));
 		casasTemporaria.add(bordas.getCasa(x+1,y-1));
 		casasTemporaria.add(bordas.getCasa(x+1,y));
@@ -232,7 +232,7 @@ public class ReiBranco extends PecaAbstrata
 		casasTemporaria.add(bordas.getCasa(x,y+1));
 		casasTemporaria.add(bordas.getCasa(x,y-1));
 		
-		// possíveis posi��es.
+		// possíveis posições.
 		CasaItf casaTemporaria=null;
 		Iterator it = casasTemporaria.iterator();
 		while(it.hasNext()){

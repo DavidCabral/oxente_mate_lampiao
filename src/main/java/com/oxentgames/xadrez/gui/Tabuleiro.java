@@ -51,10 +51,10 @@ public class Tabuleiro extends JComponent implements Borda {
 		super.repaint();
 	}
 	
-	//Adiciona pe�as do jogo xadrez no tabuleiro.
+	//Adiciona peças do jogo xadrez no tabuleiro.
 	public void adicionaPecasAoTabXadrez()
 	{	
-		// Pe�as pretas.
+		// Peças pretas.
 		casas[0][0].setPeca(new TorrePreta(0,0));
 		casas[1][0].setPeca(new CavaloPreto(1,0));
 		casas[2][0].setPeca(new BispoPreto(2,0));
@@ -66,7 +66,7 @@ public class Tabuleiro extends JComponent implements Borda {
 		for (int x = 0; x < 8; x++)
 			casas[x][1].setPeca(new PeaoPreto(x,1));
 			
-		// Pe�as brancas.
+		// Peças brancas.
 		casas[0][7].setPeca(new TorreBranca(0,7));
 		casas[1][7].setPeca(new CavaloBranco(1,7));
 		casas[2][7].setPeca(new BispoBranco(2,7));
@@ -93,7 +93,7 @@ public class Tabuleiro extends JComponent implements Borda {
 		return null;
 	}
 
-	//Remove todas as indica��es de ataque nas casas.
+	//Remove todas as indicações de ataque nas casas.
 	public void removeTodosAtaques()
 	{
 		for (int x = 0; x < 8; x++)
@@ -101,7 +101,7 @@ public class Tabuleiro extends JComponent implements Borda {
 				((Casa)this.getCasa(x,y)).removeTodosAtaques();
 	}
 	
-	//Remove todas as indica��es de ataque nas casas brancas.
+	//Remove todas as indicações de ataque nas casas brancas.
 	public void removeTodosAtaquesBranco()
 	{
 		for (int x = 0; x < 8; x++)
@@ -112,7 +112,7 @@ public class Tabuleiro extends JComponent implements Borda {
 		}
 	}
 
-	//Remove todas as indica��es de ataque nas casas pretas.
+	//Remove todas as indicações de ataque nas casas pretas.
 	public void removeTodosAtaquesPreto()
 	{
 		for (int x = 0; x < 8; x++)
@@ -123,7 +123,7 @@ public class Tabuleiro extends JComponent implements Borda {
 		}
 	}	
 	
-	//Atualiza todas as casas que estáo sendo atacadas pelas pe�as pretas.
+	//Atualiza todas as casas que estáo sendo atacadas pelas peças pretas.
 	public void atualizaAtaquePreto(){
 		CasaItf casaTemporaria;
 		for (int x = 0; x<8; x++){
@@ -136,7 +136,7 @@ public class Tabuleiro extends JComponent implements Borda {
 		}
 	}
 	
-	//Atualiza todas as casas que estáo sendo atacadas pelas pe�as brancas.
+	//Atualiza todas as casas que estáo sendo atacadas pelas peças brancas.
 	public void atualizaAtaqueBranco(){
 		CasaItf casaTemporaria;
 		for (int x = 0; x<8; x++)
@@ -184,7 +184,7 @@ public class Tabuleiro extends JComponent implements Borda {
 		return false;		
 	}
 
-	//Verifica se as pe�as brancas sofreram xeque mate.
+	//Verifica se as peças brancas sofreram xeque mate.
 	public boolean ehChequeMateBranco()
 	{
 		ReiBranco reiBranco = null;
@@ -207,10 +207,10 @@ public class Tabuleiro extends JComponent implements Borda {
 		// verifica se o rei está sendo atacado
 		if (casaDoRei.ehAtaquePreto())
 		{
-			// se o rei n�o pode mover-se 
+			// se o rei não pode mover-se 
 			if (reiBranco.getCasasQueEstaoEmAtaque(this).size()==0)
 			{
-				// Veririca se o cavalo advers�rio d� xeque - mate.
+				// Veririca se o cavalo adversário dá xeque - mate.
 				if (this.cavaloChequeMate(reiBranco))
 				{
 					return true;
@@ -218,7 +218,7 @@ public class Tabuleiro extends JComponent implements Borda {
 				
 				Vector pecasQueEstaoAtacando = this.pecasQueEstaoAtacandoRei(reiBranco);
 				
-				// Verifica se mais de uma pe�a está atacando o rei.
+				// Verifica se mais de uma peça está atacando o rei.
 				if (pecasQueEstaoAtacando.size()>=2)
 				{
 					return true;
@@ -228,12 +228,12 @@ public class Tabuleiro extends JComponent implements Borda {
 					Peca peca = (Peca)pecasQueEstaoAtacando.get(0);
 					Casa casaTemporaria = (Casa)this.getCasa(peca.getPosicaoX(),
 							peca.getPosicaoY());
-					// verifica se a pe�a que está atacando o rei tamb�m está sendo atacada.
+					// verifica se a peça que está atacando o rei também está sendo atacada.
 					if (casaTemporaria.ehAtaqueBranco())
 					{
 						return false;
 					}
-					// verifica se uma pe�a branca impede que a pe�a preta der xeque - mate.
+					// verifica se uma peça branca impede que a peça preta der xeque - mate.
 					if (pecaBrancaImpedeCheque((Peca)pecasQueEstaoAtacando.get(0),reiBranco))
 					{
 						return false;
@@ -248,7 +248,7 @@ public class Tabuleiro extends JComponent implements Borda {
 		return false;
 	}
 
-	//Verifica se uma pe�a branca impede o xeque - mate no seu rei. 
+	//Verifica se uma peça branca impede o xeque - mate no seu rei.
 	private boolean pecaBrancaImpedeCheque(Peca pecaDoAdversario,ReiBranco reiBranco)
 	{		
 		int xRei = reiBranco.getPosicaoX();
@@ -360,7 +360,7 @@ public class Tabuleiro extends JComponent implements Borda {
 		return false;
 	}
 	
-	//Verifica se uma pe�a preta impede o xeque - mate no seu rei. 
+	//Verifica se uma peça preta impede o xeque - mate no seu rei.
 	private boolean pecaPretaImpedeCheque(Peca pecaDoAdversario,ReiPreto reiPreto)
 	{	
 		int xRei = reiPreto.getPosicaoX();
@@ -472,7 +472,7 @@ public class Tabuleiro extends JComponent implements Borda {
 		return false;
 	}
 
-	//Pega todas as pe�as que estáo atacando o rei.
+	//Pega todas as peças que estáo atacando o rei.
 	private Vector pecasQueEstaoAtacandoRei(Peca rei)
 	{
 		Vector pecas = new Vector();
@@ -568,17 +568,17 @@ public class Tabuleiro extends JComponent implements Borda {
 		// verifica se o rei está sendo atacado
 		if (casaDoRei.ehAtaqueBranco())
 		{
-			// se o rei n�o pode mover-se 
+			// se o rei não pode mover-se 
 			if (reiPreto.getCasasQueEstaoEmAtaque(this).size()==0)
 			{
-				// Verifica se o cavalo advers�rio d� xeque - mate.
+				// Verifica se o cavalo adversário dá xeque - mate.
 				if (this.cavaloChequeMate(reiPreto))
 				{
 					return true;
 				}
 				
 				Vector pecasQueEstaoAtacando = this.pecasQueEstaoAtacandoRei(reiPreto);
-				// Verifica se mais de uma pe�a está atacando o rei.
+				// Verifica se mais de uma peça está atacando o rei.
 				if (pecasQueEstaoAtacando.size()>=2)
 				{
 					return true;
@@ -587,12 +587,12 @@ public class Tabuleiro extends JComponent implements Borda {
 				{
 					Peca peca = (Peca)pecasQueEstaoAtacando.get(0);
 					Casa casaTemporaria = (Casa)this.getCasa(peca.getPosicaoX(),							peca.getPosicaoY());
-					// verifica se a pe�a que está atacando o rei tamb�m está sendo atacada.
+					// verifica se a peça que está atacando o rei também está sendo atacada.
 					if (casaTemporaria.ehAtaquePreto())
 					{
 						return false;
 					}
-					// verifica se uma pe�a branca impede que a pe�a preta d� xeque - mate.
+					// verifica se uma peça branca impede que a peça preta dá xeque - mate.
 					if (pecaPretaImpedeCheque((Peca)pecasQueEstaoAtacando.get(0),reiPreto))
 					{
 						return false;
@@ -607,7 +607,7 @@ public class Tabuleiro extends JComponent implements Borda {
 		return false;
 	}
 	
-	//Remove todas as pe�as do tabuleiro.
+	//Remove todas as peças do tabuleiro.
 	public void removeTodasAsPecas()
 	{
 		this.removeTodosAtaques();
