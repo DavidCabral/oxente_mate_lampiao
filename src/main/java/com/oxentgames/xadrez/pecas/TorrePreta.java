@@ -136,7 +136,7 @@ public class TorrePreta extends PecaAbstrata{
 		
 	} 
 
-	//Verifica se a pe�a j� foi movimentada
+	//Verifica se a peça já foi movimentada
 	public boolean torreMovimentou()
 	{
 		return movimentou;
