@@ -2,48 +2,93 @@ package com.oxentgames.xadrez;
 
 import java.awt.*;
 
-//Interface que representa a casa do tabuleiro.
-public interface CasaItf
-{
-	//Modifica a abscissa da casa
-	public void setPosicaoX(int novaAbscissa);
-	
-	//Pega a abscissa da casa.
-	public int getPosicaoX();
-	
-	//Modifica a ordenada da casa
-	public void setPosicaoY(int novaOrdenada);
-	
-	//Pega a ordenada da casa
-	public int getPosicaoY();
-	
-	//Modifica a cor da casa
-	public void setCor(Color novaCor);
-	
-	//Pega a cor da casa
-	public Color getCor();
+/**
+ * Interface que representa as casas do tabuleiro.
+ */
+public interface CasaItf {
 
-	//Modifica a peça que vai ocupar a casa
-	public void setPeca(Peca novaPeca);
-    
-	//Remove a peça da casa
-	public void removePeca();
-	
-    //Pega a peça que está ocupando a casa
-	public Peca getPeca();
+    /**
+     * Pega a posição que está no eixo X (abcissa)
+     *
+     * @return posição atual no eixo X
+     */
+    int getPosicaoX();
 
-	//Verifica se a casa tem peça 
-	public boolean temPeca();
+    /**
+     * Pega a posição que está no eixo Y (ordenada)
+     *
+     * @return posição atual no eixo Y
+     */
+    int getPosicaoY();
 
-	//Verifica se a casa tem uma peça da seguinte cor.
-	public boolean temPeca(Color cor);
-	
-	//Verifica se a casa é igual.
-	public boolean verificaCasaIgual(CasaItf casa);
 
-	//Verifica se essa casa faz parte do passante.
-	public boolean getMovimentoPassante();
+    /**
+     * Modifica a cor da casa
+     *
+     * @param cor Nova cor da casa
+     */
+    void setCor(Color cor);
 
-	//Seta essa casa como passante.
-	public void setMovimentoPassante(boolean passante);
+    /**
+     * Pega a cor da casa
+     *
+     * @return Cor da casa
+     */
+    Color getCor();
+
+    /**
+     * Insere uma peça na casa
+     *
+     * @param peca Peça que irá ocupar a casa
+     */
+    void setPeca(Peca peca);
+
+    /**
+     * Remove a peça da casa
+     */
+    void removePeca();
+
+    /**
+     * Pega a peça que está ocupando a casa
+     *
+     * @return Peça que está na casa
+     */
+    Peca getPeca();
+
+    /**
+     * Verifica se a casa tem alguma peça
+     *
+     * @return <code>true</code> se tiver alguma peça e <code>false</code> caso contrario
+     */
+    boolean temPeca();
+
+    /**
+     * Verifica se a casa tem alguma peça de uma determinada cor
+     *
+     * @return <code>true</code> se tiver alguma peça da cor desejada e <code>false</code> caso contrario
+     */
+    boolean temPeca(Color cor);
+
+    /**
+     * Verifica se a casa é igual.
+     *
+     * @param casa Casa a ser comparada
+     * @return <code>true</code> se as casas forem iguais e <code>false</code> caso contrario
+     */
+    boolean verificaCasaIgual(CasaItf casa);
+
+    /**
+     * Verifica se a casa faz parte do passante.
+     *
+     * @return <code>true</code> se fizer parte do movimento passante e <code>false</code> caso contrario
+     */
+    boolean getMovimentoPassante();
+
+    /**
+     * Seta essa casa como passante.
+     *
+     * @param passante <code>true</code> se for passante e <code>false</code> caso contrario
+     */
+    void setMovimentoPassante(boolean passante);
+
 }

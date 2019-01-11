@@ -3,55 +3,59 @@ package com.oxentgames.xadrez;
 import java.awt.*;
 import java.util.Vector;
 
+/**
+ * Interface que representa as peças do tabuleiro
+ */
 public interface Peca {
+
     /**
-     * Modifica a Cor da peça
+     * Modifica a cor da peça
      *
-     * @param novaCor
+     * @param cor Nova cor da peça
      */
-    public void setCor(Color novaCor);
+    void setCor(Color cor);
 
     /**
      * Pega a cor da peça
      *
-     * @return
+     * @return Cor da peça
      */
-    public Color getCor();
+    Color getCor();
 
     /**
-     * Modifica a abcissa da peça
+     * Move a peça no Eixo X (abcissa)
      *
-     * @param novaAbscissa
+     * @param posicao Posição para qual a peça irá
      */
-    public void setPosicaoX(int novaAbscissa);
+    void setPosicaoX(int posicao);
 
     /**
-     * Pega a está abcissa da peça no tabuleiro
+     * Pega a posição que está no eixo X (abcissa)
      *
-     * @return
+     * @return posição atual no eixo X
      */
-    public int getPosicaoX();
+    int getPosicaoX();
 
     /**
-     * Modifica a ordenada da peça
+     * Move a peça no eixo Y (ordenada)
      *
-     * @param novaOrdenada
+     * @param posicao Posição para qual a peça irá
      */
-    public void setPosicaoY(int novaOrdenada);
+    void setPosicaoY(int posicao);
 
     /**
-     * Pega a está ordenada da peça no tabuleiro.
+     * Pega a posição que está no eixo Y (ordenada)
      *
-     * @return
+     * @return posição atual no eixo Y
      */
-    public int getPosicaoY();
+    int getPosicaoY();
 
     /**
      * Informa ao tabuleiro quais casas a peça está atacando
      *
      * @param bordas
      */
-    public void setCasasQueEstaoEmAtaque(Borda bordas);
+    void setCasasQueEstaoEmAtaque(Borda bordas);
 
     /**
      * Pega do tabuleiro as casa que são visiveis a peça
@@ -59,7 +63,7 @@ public interface Peca {
      * @param bordas
      * @return
      */
-    public Vector getCasasQueEstaoVisiveis(Borda bordas);
+    Vector getCasasQueEstaoVisiveis(Borda bordas);
 
     /**
      * Pega as casas que a peça está atacando.
@@ -67,7 +71,7 @@ public interface Peca {
      * @param bordas
      * @return as casas que a peça está atacando
      */
-    public Vector getCasasQueEstaoEmAtaque(Borda bordas);
+    Vector getCasasQueEstaoEmAtaque(Borda bordas);
 
     /**
      * Verifica se a casa é visível a peça no tabuleiro.
@@ -76,7 +80,7 @@ public interface Peca {
      * @param casa
      * @return <code>true</code> se for visivel e <code>false</code> caso contrario
      */
-    public boolean casaVisivel(Borda bordas, CasaItf casa);
+    boolean casaVisivel(Borda bordas, CasaItf casa);
 
     /**
      * Move a peça para uma nova está.
@@ -86,5 +90,5 @@ public interface Peca {
      * @param bordas
      * @throws MovimentoEPosicaoInvalida
      */
-    public void mover(CasaItf casaDeOrigem, CasaItf casaDeDestino, Borda bordas) throws MovimentoEPosicaoInvalida;
+    void mover(CasaItf casaDeOrigem, CasaItf casaDeDestino, Borda bordas) throws MovimentoEPosicaoInvalida;
 }
