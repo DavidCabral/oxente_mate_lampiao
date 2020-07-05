@@ -1,9 +1,9 @@
-package com.oxentgames;
+package com.oxent;
 
 import com.jtattoo.plaf.texture.TextureLookAndFeel;
-import com.oxentgames.utilitarios.GeralImagens;
-import com.oxentgames.utilitarios.ImagemDeFundo;
-import com.oxentgames.xadrez.aplicativos.IniciarJogo;
+import com.oxent.utilitarios.GeralImagens;
+import com.oxent.utilitarios.ImagemDeFundo;
+import com.oxent.xadrez.aplicativos.IniciarJogo;
 import org.jdesktop.swingx.JXButton;
 
 import javax.swing.*;
@@ -12,7 +12,7 @@ import java.awt.*;
 import java.util.Properties;
 
 public class Main extends JFrame {
-    private static final long serialVersionUID = 1346595952955948075L;
+
     private JPanel contentPane;
 
     public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class Main extends JFrame {
 
     public Main() {
         super("Oxente-Mate Lampião");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         super.setResizable(false);
         super.setSize(new Dimension(500, 600));
         super.setLocationRelativeTo(null);
@@ -68,6 +68,5 @@ public class Main extends JFrame {
         btnSair.setBounds(371, 227, 98, 37);
         contentPane.add(btnSair);
         contentPane.add(new ImagemDeFundo(GeralImagens.BACKGROUND, 0));
-
     }
 }

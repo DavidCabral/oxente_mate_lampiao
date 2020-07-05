@@ -1,4 +1,4 @@
-package com.oxentgames.xadrez;
+package com.oxent.xadrez;
 
 import java.awt.*;
 import java.util.Vector;
