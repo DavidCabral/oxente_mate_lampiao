@@ -13,3 +13,5 @@
 *.rar
 .target/
 
+.idea/
+*.iml
